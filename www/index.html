@@ -7,7 +7,7 @@
             let ws = new WebSocket("ws://localhost:8080/");
             let text = document.getElementById("text");
 
-            text.addEventListener('change', (e) => {
+            text.addEventListener('keyup', (e) => {
                 ws.send(e.target.value);
             });
 
