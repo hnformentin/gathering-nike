@@ -1,0 +1,19 @@
+{
+  "name": "gathering-nike",
+  "version": "1.0.0",
+  "description": "To run the project locally, you need docker:",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/equinor/gathering-nike.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/equinor/gathering-nike/issues"
+  },
+  "homepage": "https://github.com/equinor/gathering-nike#readme"
+}
