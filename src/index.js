@@ -1,15 +1,16 @@
+const express = require('express')
 const WebSocketServer = require('websocket').server;
-const http = require('http');
+const serveStatic = require('serve-static');
+
+// Setting up the http server
+var app = express();
+app.use(serveStatic('./www'));
  
-var server = http.createServer(function(request, response) {
-    console.log((new Date()) + ' Received request for ' + request.url);
-    response.writeHead(404);
-    response.end();
-});
-server.listen(8080, function() {
+var server = app.listen(8080, function() {
     console.log((new Date()) + ' Server is listening on port 8080');
 });
- 
+
+// setting up the web socket server.
 wsServer = new WebSocketServer({
     httpServer: server,
     autoAcceptConnections: true
