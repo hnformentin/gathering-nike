@@ -1,0 +1,23 @@
+{
+  // Use IntelliSense to learn about possible Node.js debug attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "env": {
+        "REACT_APP_CLIENT_ID": "f9d190b5-60b6-45e4-8fd6-a1919fa09f46",
+        "REACT_APP_JSV_ADMIN_API_URL": "http://localhost:5005/api/v1",
+        "PORT": "3005"
+      },
+      "type": "node",
+      "request": "launch",
+      "name": "yarn",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["start"],
+      "port": 3005,
+      "cwd": "${workspaceRoot}",
+      "timeout": 10000
+    }
+  ]
+}
