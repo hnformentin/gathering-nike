@@ -11,7 +11,8 @@ server.listen(8080, function() {
 });
  
 wsServer = new WebSocketServer({
-    httpServer: server
+    httpServer: server,
+    autoAcceptConnections: true
 });
 
 let lastId = 0;
@@ -24,7 +25,7 @@ wsServer.on('connect', function(ws) {
     
     ws.on('message', function(msg) {
         clients.forEach(client => {
-            if(client[0] === id) continue;
+            if(client[0] === id) return;
             client[1].sendUTF(msg.utf8Data);
         });
     });
