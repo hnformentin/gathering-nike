@@ -4,7 +4,17 @@
         <textarea id="text"></textarea>
 
         <script>
-            console.log("hello world!");
+            let ws = new WebSocket("ws://localhost:8080/");
+            let text = document.getElementById("text");
+
+            text.addEventListener('change', (e) => {
+                ws.send(e.target.value);
+            });
+
+            ws.onmessage = (e) => {
+                text.value = e.data;
+            }
+
         </script>
     </body>
 </html>
