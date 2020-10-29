@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/equinor/gathering-nike/issues"
   },
-  "homepage": "https://github.com/equinor/gathering-nike#readme"
+  "homepage": "https://github.com/equinor/gathering-nike#readme",
+  "dependencies": {
+    "websocket": "^1.0.32"
+  }
 }
