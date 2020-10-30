@@ -4,27 +4,11 @@ export interface IConfig {
 }
 
 export function getClientId(): string {
-  if (process.env.NODE_ENV === "development") {
-    const clientId = process.env.REACT_APP_CLIENT_ID;
-    if (!clientId) {
-      throw Error("REACT_APP_CLIENT_ID missing from environment");
-    }
-    return clientId;
-  } else {
-    return getConfig("CLIENT_ID");
-  }
+  return "f9d190b5-60b6-45e4-8fd6-a1919fa09f46";
 }
 
 export function getJsvAdminApiUrl() {
-  if (process.env.NODE_ENV === "development") {
-    const clientId = process.env.REACT_APP_JSV_ADMIN_API_URL;
-    if (!clientId) {
-      throw Error("REACT_APP_JSV_ADMIN_API_URL missing from environment");
-    }
-    return clientId;
-  } else {
-    return getConfig("JSV_ADMIN_API_URL");
-  }
+  return "http://localhost:5005/api/v1"
 }
 
 export function getConfig(param: keyof IConfig): string {
