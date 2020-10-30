@@ -7,11 +7,11 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Server",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\src\\index.js"
+            "program": "${workspaceFolder}/src/index.js"
         },
         {
             "name": "Launch index.html",
@@ -27,7 +27,7 @@
             },
             "type": "node",
             "request": "launch",
-            "name": "yarn",
+            "name": "Client",
             "runtimeExecutable": "yarn",
             "runtimeArgs": ["start"],
             "port": 3005,
