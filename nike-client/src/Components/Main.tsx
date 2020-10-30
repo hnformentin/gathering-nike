@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Websocket from 'websocket';
+import showEasterEgg from "./easter-egg"
 
 const ws = new WebSocket("ws://localhost:8080/");
 
@@ -24,6 +25,11 @@ export const Main = () => {
       const message = evt.data
       setData(message)
       console.log(message)
+
+      if (message.toLowerCase().includes("easteregg") ){
+        showEasterEgg();
+      }
+
       }
 
       ws.onclose = () => {
