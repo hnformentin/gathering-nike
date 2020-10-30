@@ -12,8 +12,10 @@ spec:
       src: "."
       ports:
        - name: http
-         port: 8000
+         port: 8080
       publicPort: http
+      ingressConfiguration:
+        - websocketfriendly
   dnsAppAlias:
     environment: prod
     component: server
