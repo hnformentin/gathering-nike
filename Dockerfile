@@ -1,13 +1,14 @@
-FROM python:3.6
-
+FROM node:13.8.0-alpine
+WORKDIR /app
 COPY . /app
 
+WORKDIR /app/nike-client
+RUN npm install
+RUN npm build
+
 WORKDIR /app
+RUN npm install
 
-RUN pip install -r requirements.txt
+EXPOSE 8080
 
-ENTRYPOINT ["python"]
-
-EXPOSE 8000
-
-CMD ["app.py"]
+CMD ["npm", "start"]

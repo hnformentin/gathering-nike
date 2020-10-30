@@ -1,0 +1,4 @@
+.git
+node_modules/
+nuke-client/node_modules/
+nuke-client/build/

@@ -4,7 +4,7 @@ const serveStatic = require('serve-static');
 
 // Setting up the http server
 var app = express();
-app.use(serveStatic('./www'));
+app.use(serveStatic('./nike-client/build'));
  
 var server = app.listen(8080, function() {
     console.log((new Date()) + ' Server is listening on port 8080');
