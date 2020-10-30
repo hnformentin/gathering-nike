@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Websocket from 'websocket';
-
+import nike from "Images/whomadethis.png";
+const EasterEgg = require('react-easter');
 const ws = new WebSocket(websocketServerUrl());
-
+const eggCode = [
+  'n','i','k','e'
+];
 function websocketServerUrl()  {
   // get location of webpage;
   const loc = window.location;
@@ -47,10 +50,16 @@ export const Main = () => {
 
   return (
       <>
+      <EasterEgg keys={eggCode} timeout={5000}>
+        <div >
+        <img src={nike} />
+        </div>
+      </EasterEgg> 
         <div id = "main">
           <textarea onChange={(e) => handleChange(e.target.value as string)} value={data} id="text"></textarea>
         </div>
         <canvas id="canvas" height="800" width="800"></canvas>
       </>
+      
   );
 };

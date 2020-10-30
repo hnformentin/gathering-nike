@@ -1,3 +1,10 @@
 #root {
   height: 100vh
 }
+
+div.main {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
