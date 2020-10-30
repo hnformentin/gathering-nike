@@ -4,7 +4,7 @@ COPY . /app
 
 WORKDIR /app/nike-client
 RUN npm install
-RUN npm build
+RUN npm run build
 
 WORKDIR /app
 RUN npm install
