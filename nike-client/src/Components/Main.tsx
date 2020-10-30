@@ -1,7 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import Websocket from 'websocket';
 
-const ws = new WebSocket("ws://localhost:8080/");
+const ws = new WebSocket(websocketServerUrl());
+
+function websocketServerUrl()  {
+  // get location of webpage;
+  const loc = window.location;
+  if (loc.host.includes("localhost")) {
+    // we are in dev return stander.
+    return "ws://localhost:8080/";
+  }
+
+  // we are in radix use url based on server.
+  return "wss://" +  loc.host + "/"
+}
 
 export const Main = () => {
 
